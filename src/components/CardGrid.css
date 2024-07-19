@@ -1,0 +1,36 @@
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    flex: 0 1 calc(25% - 32px);
+    box-sizing: border-box;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 8px;
+  }
+  
+  .card span {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
