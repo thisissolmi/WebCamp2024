@@ -15,12 +15,13 @@ function MainContent() {
        
           <Title>사진들 추가하기!</Title>
           {/* 
-          <ProductList /> */
+           */
           }
           <Img src="/Img/pic1.png" />
           {count} 번 
           <button onClick={() =>  addCount()}>버튼</button>
           <CardGrid />
+          <ProductList />
       </MainContentContainer>
   );
 }

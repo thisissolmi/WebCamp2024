@@ -67,9 +67,6 @@
 
 
 
-
-
-
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList, faCamera, faHome, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
