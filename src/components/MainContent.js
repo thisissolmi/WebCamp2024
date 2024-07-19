@@ -14,9 +14,6 @@ function MainContent() {
       <MainContentContainer>
        
           <Title>사진들 추가하기!</Title>
-          {/* 
-           */
-          }
           <Img src="/Img/pic1.png" />
           {count} 번 
           <button onClick={() =>  addCount()}>버튼</button>

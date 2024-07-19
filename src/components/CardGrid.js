@@ -1,8 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './CardGrid.css'; 
-import './Category1';
-import './MainContent';
+import styled from 'styled-components';
 
 const cards = [
   { id: 1, name: '무탠다드', image: '/path/to/image1.png', path: '/category1' },
@@ -29,15 +27,52 @@ const CardGrid = () => {
   };
 
   return (
-    <div className="card-grid">
+    <CardGridContainer className="card-grid">
       {cards.map((card) => (
-        <div key={card.id} className="card" onClick={() => handleCardClick(card.path)}>
-          <img src={card.image} alt={card.name} />
-          <span>{card.name}</span>
-        </div>
+        <CardContainer key={card.id} className="card" onClick={() => handleCardClick(card.path)}>
+          <Img src={card.image} alt={card.name} />
+          <Span>{card.name}</Span>
+        </CardContainer>
       ))}
-    </div>
+    </CardGridContainer>
   );
 };
+
+const CardGridContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 5px;
+`;
+
+const CardContainer = styled.div`
+  height: 80px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  flex: 0 1 calc(25% - 32px);
+  box-sizing: border-box;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+const Img = styled.img`
+  width: 80px;
+  height: 80px;
+  margin-bottom: 5px;
+`;
+
+const Span = styled.span`
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+`;
 
 export default CardGrid;
