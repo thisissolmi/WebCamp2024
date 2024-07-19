@@ -68,6 +68,7 @@ import Test from './components/test';
 import ProductList from './components/ProductList';
 import CardGrid from './components/CardGrid';
 import Category1 from './components/Category1';
+import Category2 from './components/Category2';
 import './App.css'; // Add your styles here
 
 const App = () => (
@@ -80,6 +81,7 @@ const App = () => (
       <Route path="/Products" element={<ProductList />} />
       <Route path="/Test" element={<Test />} />
       <Route path="/Category1" element={<Category1 />} />
+      <Route path="/Category2" element={<Category2 />} />
       <Route path="/CardGrid" element={<CardGrid/>} />
 
       {/* Add other routes here */}

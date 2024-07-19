@@ -1,56 +1,57 @@
-// import React from 'react';
-
-// const Navbar = () => (
-//   <nav className="navbar">
-//     <ul>
-//       <li>무탠다드</li>
-//       <li>추천</li>
-//       <li>뷰티</li>
-//       <li>랭킹</li>
-//       <li>매일 14시 세일 </li>
-//       <li>스타일 </li>
-//       <li>이벤트</li>
-//     </ul>
-//   </nav>
-// );
-
-// export default Navbar;
-
-
-
-// import React from 'react';
-
-// const Navbar = () => (
-//   <nav class="main__sc-hdln0h-0 dUvrff"><div class="main__sc-hdln0h-1 RBple"><button type="button" class="main__sc-hdln0h-2 gXHcZq">무탠다드</button><button type="button" class="main__sc-hdln0h-2 eDfzCW">추천</button><button type="button" class="main__sc-hdln0h-2 jMFAZW">뷰티</button><button type="button" class="main__sc-hdln0h-2 jMFAZW">랭킹</button><button type="button" class="main__sc-hdln0h-2 jMFAZW">세일<span class="main__sc-hdln0h-3 cVYELs"><span class="main__sc-5myq0a-0 cRAVhG">매일 14시</span></span></button><button type="button" class="main__sc-hdln0h-2 jMFAZW">스타일</button><button type="button" class="main__sc-hdln0h-2 jMFAZW">이벤트</button></div></nav>
-// );
-
-// export default Navbar;
-
 import React from 'react';
-import './Navbar.css';
-import './MainContent';
+import styled from 'styled-components';
 
 const Navbar = () => (
-  <nav className="main__nav">
-    <div className="main__nav-container">
-      <button type="button" className="main__nav-button active">무탠다드</button>
-      <button type="button" className="main__nav-button">추천</button>
-      <button type="button" className="main__nav-button">뷰티</button>
-      <button type="button" className="main__nav-button">랭킹</button>
-      <button type="button" className="main__nav-button">
+  <Nav>
+    <NavContainer>
+      <NavButton className="active">무탠다드</NavButton>
+      <NavButton>추천</NavButton>
+      <NavButton>뷰티</NavButton>
+      <NavButton>랭킹</NavButton>
+      <NavButton>
         세일
-        <span className="main__nav-sale-time">
-          <span className="main__nav-sale-text">매일 14시</span>
-        </span>
-      </button>
-      <button type="button" className="main__nav-button">스타일</button>
-      <button type="button" className="main__nav-button">이벤트</button>
-    </div>
-  </nav>
+        <SaleTime>
+          <SaleText>매일 14시</SaleText>
+        </SaleTime>
+      </NavButton>
+      <NavButton>스타일</NavButton>
+      <NavButton>이벤트</NavButton>
+    </NavContainer>
+  </Nav>
 );
 
+const Nav = styled.nav`
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 5px 10px;
+`;
+
+const NavContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
+const NavButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 13px;
+  color: #999;
+
+  &.active {
+    color: #007aff;
+    font-weight: bold;
+  }
+`;
+
+const SaleTime = styled.span`
+  margin-left: 5px;
+`;
+
+const SaleText = styled.span`
+  color: #999;
+  font-size: 12px;
+`;
+
 export default Navbar;
-
-
-
-
