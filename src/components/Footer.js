@@ -67,11 +67,11 @@ const NavItem = styled.li`
   align-items: center;
   color: white;
   cursor: pointer;
-  padding: 10px;
+  padding: 5px;
 
   span {
     margin-top: 5px;
-    font-size: 12px;
+    font-size: 10px;
   }
 `;
 

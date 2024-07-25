@@ -42,14 +42,14 @@ const CardGridContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 10px;
+  gap: 5px;
   padding: 5px;
 `;
 
 const CardContainer = styled.div`
-  height: 80px;
+  height: 90px;
   background-color: #f4f4f4;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 5px;
   text-align: center;
   cursor: pointer;
